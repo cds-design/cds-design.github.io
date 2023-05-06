@@ -10,48 +10,39 @@ const features = [
   {
     title: "Light-weight",
     description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
+      "CDS weighs around 5KB plus 2KB per component. Learn more at https://bundlephobia.com/package/ct-ds@0.0.1",
   },
   {
     title: "Accessible",
     description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
-  },
-  {
-    title: "Modern",
-    description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
+      "Each of the components is handcrafted with Semantic HTML and ARIA standards",
   },
   {
     title: "Futuristic",
     description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
+      "The design system is not from the past but strives to spark the future",
   },
   {
     title: "Performant",
     description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
+      "Lazy loading, tree-shaking and many more technologies for browsers to focus more on the site specific features.",
   },
   {
     title: "Customizable",
     description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
+      "CDS components are made of atomic design tokens making them highly customizable",
   },
   {
     title: "Framework Agnostic",
     description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
+      "Whether it is React , Vue , Svelte or barebone vanilla , CDS thrives everywhere out-of-the-box",
   },
   {
     title: "Max Browser Compatibility",
     description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
+      "No polyfill, ponyfill or prollyfill, CDS is completely native using Custom elements and Shadow DOM, so supports most of the browsers.",
   },
-  {
-    title: "Futuristic",
-    description:
-      "A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.",
-  },
+  
 ];
 
 export default function Features() {
