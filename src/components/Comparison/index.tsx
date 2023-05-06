@@ -8,6 +8,7 @@ import {
   before_img as before_img_style,
   before,
   after,
+  gradient_text,
 } from "./style.css";
 
 export default function Comparison() {
@@ -24,7 +25,7 @@ export default function Comparison() {
             fontSize: "0em",
           }}
         >
-          <span className={before}>Before</span>
+          <span className={before}>Your Site</span>
         </Tween>
         <Tween
           from={{
@@ -36,7 +37,10 @@ export default function Comparison() {
             fontSize: "5em",
           }}
         >
-          <span className={after}>After</span>
+          <span className={after}>
+            Plus
+            <span className={gradient_text}> CDS</span>
+          </span>
         </Tween>
         <Tween>
           <img src={after_img} className={img} alt="After Image" />

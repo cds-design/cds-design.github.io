@@ -30,15 +30,23 @@ const indications: ComplexStyleRule = {
 
 const before = style({
   ...indications,
-  transform: "rotate(0.5turn) translateY(-50%) translateX(100%)",
+  transform: "scale(-1, -1)",
   left: 0,
 });
 
 const after = style({
   ...indications,
   right: 0,
-  transform: "translateY(50%) translateX(-100%)",
   opacity: 0,
 });
 
-export { section, img, before_img, before, after };
+const gradient_text = style({
+  WebkitBackgroundClip: "text !important",
+  backgroundClip: "text !important",
+  WebkitTextFillColor: "transparent",
+  color: "transparent",
+  background:
+    "linear-gradient(352deg, rgb(92 72 163) 0%, rgb(158 83 117) 30%, rgb(245 110 88) 100%);",
+})
+
+export { section, img, before_img, before, after, gradient_text };

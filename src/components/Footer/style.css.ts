@@ -21,15 +21,13 @@ const cursor = style({
   borderRadius: "50vmax",
   transform: "translate(-50%, -50%)",
   backdropFilter: "blur(5px) brightness(3)",
-  transition: "top, left 0.4s ease",
+  top: "-200%",
+  left: "-200%",
   selectors: {
     [`${footer}:not(:hover) &`]: {
       top: "-200% !important",
       left: "-200% !important",
-    },
-    [`${footer}:hover &`]: {
-      transition: "none",
-    },
+    }
   },
 });
 

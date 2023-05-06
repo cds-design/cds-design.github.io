@@ -77,7 +77,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className={footer} onMouseMove={cursorHandler}>
+    <footer className={footer} onMouseMoveCapture={cursorHandler}>
       <div className={masonry}>
         {mason.map(({ name, href, ...styles }, index) => (
           <a style={styles} className={link} href={href} key={index}>

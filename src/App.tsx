@@ -1,6 +1,6 @@
 import "./App.css";
 
-import load from "continuum";
+import load from "ct-ds";
 import useFullscreen from "ahooks/lib/useFullscreen";
 import useBoolean from "ahooks/lib/useBoolean";
 
