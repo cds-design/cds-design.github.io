@@ -27,7 +27,7 @@ const cursor = style({
     [`${footer}:not(:hover) &`]: {
       top: "-200% !important",
       left: "-200% !important",
-    }
+    },
   },
 });
 

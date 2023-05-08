@@ -47,6 +47,6 @@ const gradient_text = style({
   color: "transparent",
   background:
     "linear-gradient(352deg, rgb(92 72 163) 0%, rgb(158 83 117) 30%, rgb(245 110 88) 100%);",
-})
+});
 
 export { section, img, before_img, before, after, gradient_text };

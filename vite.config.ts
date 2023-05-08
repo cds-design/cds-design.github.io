@@ -5,17 +5,19 @@ import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import autoprefixer from "autoprefixer";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  assetsInclude: ["**/*.glb"],
-  css: {
-    postcss: {
-      plugins: [
-        autoprefixer(),
-      ]
-    }
-  },
-  plugins: [
-    vanillaExtractPlugin(),
-    react(),
-    webfontDownload()],
+export default defineConfig(({ mode }) => {
+  const isProd = mode === "production";
+  return {
+    assetsInclude: ["**/*.glb"],
+    css: {
+      postcss: {
+        plugins: [autoprefixer()],
+      },
+    },
+    plugins: [
+      vanillaExtractPlugin(),
+      react(),
+      isProd ? webfontDownload() : undefined,
+    ],
+  };
 });

@@ -45,7 +45,6 @@ const section = style({
   placeItems: "center",
   position: "relative",
   marginBlock: "25vh",
-
 });
 
 const div = style({

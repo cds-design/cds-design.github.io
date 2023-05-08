@@ -39,7 +39,6 @@ export default function Nav({
     <Tween
       to={{
         rotation: -90,
-      
       }}
     >
       <svg

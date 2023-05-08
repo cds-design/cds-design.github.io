@@ -25,7 +25,9 @@ const components = [
   {
     name: "input",
     jsx: ({ className }: { className: string }) => (
-      <ct-input className={className} placeholder="placeholder">PlaceHolder</ct-input>
+      <ct-input className={className} placeholder="placeholder">
+        PlaceHolder
+      </ct-input>
     ),
   },
   {
@@ -37,7 +39,9 @@ const components = [
   {
     name: "alert",
     jsx: ({ className }: { className: string }) => (
-      <ct-alert type="warn" className={className}>This is Alert</ct-alert>
+      <ct-alert type="warn" className={className}>
+        This is Alert
+      </ct-alert>
     ),
   },
   {

@@ -9,40 +9,64 @@ import {
 const features = [
   {
     title: "Light-weight",
-    description:
-      "CDS weighs around 5KB plus 2KB per component. Learn more at https://bundlephobia.com/package/ct-ds@0.0.1",
+    description: (
+      <>
+        CDS is intangible, it costs around{" "}
+        <strong>5KB plus 2KB per component</strong> in your bundle.
+      </>
+    ),
   },
   {
     title: "Accessible",
     description:
-      "Each of the components is handcrafted with Semantic HTML and ARIA standards",
+      "CDS components are handcrafted with Semantic HTML and ARIA standards.",
   },
   {
     title: "Futuristic",
-    description:
-      "The design system is not from the past but strives to spark the future",
+    description: "CDS is not from the past but strives to spark the future.",
   },
   {
     title: "Performant",
     description:
-      "Lazy loading, tree-shaking and many more technologies for browsers to focus more on the site specific features.",
+      "CDS employs Lazy loading, tree-shaking and many more technologies for browsers to focus more on the site specific features.",
   },
   {
     title: "Customizable",
     description:
-      "CDS components are made of atomic design tokens making them highly customizable",
+      "CDS components are built using atomic design tokens making them highly customizable.",
   },
   {
     title: "Framework Agnostic",
     description:
-      "Whether it is React , Vue , Svelte or barebone vanilla , CDS thrives everywhere out-of-the-box",
+      "Whether it is React, Vue, Svelte or barebone vanilla, CDS thrives everywhere out-of-the-box.",
   },
   {
     title: "Max Browser Compatibility",
     description:
       "No polyfill, ponyfill or prollyfill, CDS is completely native using Custom elements and Shadow DOM, so supports most of the browsers.",
   },
-  
+  {
+    title: "Developer Experience",
+    description:
+      "CDS is built with developer experience in mind, you get auto-completions, type checking, annotations and many more features in your IDE.",
+  },
+  {
+    title: "Open Source",
+    description:
+      "CDS is completely open source, so you can contribute to make it better.",
+  },
+  {
+    title: "What's next?",
+    description: (
+      <>
+        Request a new feature{" "}
+        <a href="https://github.com/Continuum-Design-System/continuum/issues/new">
+          here
+        </a>
+        . It may land in next major release.
+      </>
+    ),
+  },
 ];
 
 export default function Features() {
