@@ -63,7 +63,7 @@ export default function Header() {
           }}
         >
           <div className={card}>
-            <ct-button className={ctButton}>Get Started</ct-button>
+            <cds-button className={ctButton}>Get Started</cds-button>
           </div>
         </Tween>
       </header>

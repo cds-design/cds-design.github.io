@@ -13,7 +13,7 @@
     "@react-three/fiber": "^8.12.0",
     "@studio-freight/lenis": "^1.0.6",
     "ahooks": "^3.7.6",
-    "ct-ds": "^0.0.1",
+    "cds-design": "^0.0.1",
     "gsap": "^3.11.5",
     "react": "^18.2.0",
     "react-curved-text": "^2.0.2",

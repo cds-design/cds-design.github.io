@@ -13,41 +13,41 @@ const components = [
   {
     name: "button",
     jsx: ({ className }: { className: string }) => (
-      <ct-button className={className}>Button</ct-button>
+      <cds-button className={className}>Button</cds-button>
     ),
   },
   {
     name: "slider",
     jsx: ({ className }: { className: string }) => (
-      <ct-slider className={className}></ct-slider>
+      <cds-slider className={className}></cds-slider>
     ),
   },
   {
     name: "input",
     jsx: ({ className }: { className: string }) => (
-      <ct-input className={className} placeholder="placeholder">
+      <cds-input className={className} placeholder="placeholder">
         PlaceHolder
-      </ct-input>
+      </cds-input>
     ),
   },
   {
     name: "checkbox",
     jsx: ({ className }: { className: string }) => (
-      <ct-check className={className}></ct-check>
+      <cds-check className={className}></cds-check>
     ),
   },
   {
     name: "alert",
     jsx: ({ className }: { className: string }) => (
-      <ct-alert type="warn" className={className}>
+      <cds-alert type="warn" className={className}>
         This is Alert
-      </ct-alert>
+      </cds-alert>
     ),
   },
   {
     name: "toggle",
     jsx: ({ className }: { className: string }) => (
-      <ct-toggle className={className}></ct-toggle>
+      <cds-toggle className={className}></cds-toggle>
     ),
   },
 ];
