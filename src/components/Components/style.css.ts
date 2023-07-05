@@ -8,22 +8,22 @@ const generateCord = (range = 10) =>
 const float = keyframes({
   "25%": {
     transform: `translate3d(${generateCord()}px, ${generateCord()}px, ${generateCord()}px) rotate3d(${generateCord(
-      1
+      1,
     )}, ${generateCord(1)}, ${generateCord(1)}, 2.5deg)`,
   },
   "50%": {
     transform: `translate3d(${generateCord()}px, ${generateCord()}px, ${generateCord()}px) rotate3d(${generateCord(
-      1
+      1,
     )}, ${generateCord(1)}, ${generateCord(1)}, 2.5deg)`,
   },
   "75%": {
     transform: `translate3d(${generateCord()}px, ${generateCord()}px, ${generateCord()}px) rotate3d(${generateCord(
-      1
+      1,
     )}, ${generateCord(1)}, ${generateCord(1)}, 2.5deg)`,
   },
   "100%": {
     transform: `translate3d(${generateCord()}px, ${generateCord()}px, ${generateCord()}px) rotate3d(${generateCord(
-      1
+      1,
     )}, ${generateCord(1)}, ${generateCord(1)}, 2.5deg)`,
   },
 });

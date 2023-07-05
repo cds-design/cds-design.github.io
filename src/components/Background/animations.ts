@@ -41,7 +41,7 @@ export function animation(renderer: RootState) {
     position.set(
       percent * 100,
       percent * 100 + 25,
-      percent > 0.1 ? percent * 10 - 10 : 0
+      percent > 0.1 ? percent * 10 - 10 : 0,
     );
   }
 
@@ -49,7 +49,7 @@ export function animation(renderer: RootState) {
 
   renderer.camera.quaternion.slerp(
     quaternion.setFromEuler(rotation),
-    LERP_SPEED
+    LERP_SPEED,
   );
 
   prevPercent = percent;

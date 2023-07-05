@@ -20,7 +20,7 @@ for (; 0 < count--; ) {
   points.push(
     vec
       .set(random() * 500 - 300, random() * 500 - 300, random() * 500 - 300)
-      .clone()
+      .clone(),
   );
 }
 const starsGeometry = new BufferGeometry().setFromPoints(points);

@@ -54,7 +54,7 @@ const components = [
 
 export default function Components() {
   const [_activeComponent, setActiveComponent] = useState(
-    ~~(random() * components.length)
+    ~~(random() * components.length),
   );
 
   const activeComponent = useDebounce(_activeComponent, { wait: 0.4e3 });
@@ -83,7 +83,7 @@ export default function Components() {
       target: divRef.current,
       capture: true,
       passive: false,
-    }
+    },
   );
 
   const Component = components[activeComponent].jsx;

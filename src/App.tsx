@@ -18,7 +18,7 @@ function App() {
   const [viewVisible, { setTrue: showView }] = useBoolean();
 
   const [isFullscreen, { enterFullscreen }] = useFullscreen(
-    document.documentElement
+    document.documentElement,
   );
 
   return (
