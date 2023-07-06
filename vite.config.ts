@@ -8,6 +8,7 @@ import autoprefixer from "autoprefixer";
 export default defineConfig(({ mode }) => {
   const isProd = mode === "production";
   return {
+    base: "./",
     assetsInclude: ["**/*.glb"],
     css: {
       postcss: {
