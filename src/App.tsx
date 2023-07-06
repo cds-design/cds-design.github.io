@@ -46,7 +46,7 @@ function App() {
         </>
       )}
       <img
-        src="/bg.svg"
+        src="./bg.svg"
         style={{
           position: "fixed",
           inset: 0,
