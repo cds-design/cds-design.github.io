@@ -12,6 +12,7 @@ header,
 section,
 footer {
   min-height: 100vh;
+  max-width: 100vw;
   display: grid;
   place-items: center;
 }
