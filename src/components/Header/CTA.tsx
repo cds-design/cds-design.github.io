@@ -7,7 +7,7 @@ export default function CTA({ getStarted }: { getStarted: () => void }) {
         getStarted();
     }
     return (
-        <a onClick={celebrate} href="/docs/getting-started">
+        <a onClick={celebrate} href="/docs">
             <cds-button className={ctButton}>Get Started</cds-button>
         </a>
     )
