@@ -102,7 +102,7 @@ export function getStartedAnimation(renderer: RootState) {
      * this is the faster method compared to using `window.location.href` and `window.location.assign`
     */
     const docsGetStarted = document.createElement('a');
-    docsGetStarted.href = '/docs/get-started';
+    docsGetStarted.href = '/docs/getting-started';
     document.body.appendChild(docsGetStarted);
     docsGetStarted.click();
   }
