@@ -60,7 +60,7 @@ const features = [
     description: (
       <>
         Request a new feature{" "}
-        <a href="https://github.com/Continuum-Design-System/continuum/issues/new">
+        <a href="https://github.com/cds-design/continuum/issues/new">
           here
         </a>
         . It may land in next major release.
