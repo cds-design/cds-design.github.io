@@ -3,6 +3,7 @@ import "./App.css";
 import { load } from "cds-design";
 import useFullscreen from "ahooks/lib/useFullscreen";
 import useBoolean from "ahooks/lib/useBoolean";
+import useEventListener from "ahooks/lib/useEventListener";
 
 import Background from "./components/Background";
 import Header from "./components/Header";
@@ -15,11 +16,30 @@ import Footer from "./components/Footer";
 load("button", "alert", "input", "toggle", "check", "slider");
 
 function App() {
-  const [viewVisible, { setTrue: showView }] = useBoolean();
+  const [viewVisible, { set: showView }] = useBoolean();
+  const [letsStart, { setTrue: getStarted }] = useBoolean();
 
   const [isFullscreen, { enterFullscreen }] = useFullscreen(
     document.documentElement,
   );
+
+  useEventListener("mousedown", () => {
+    if (!isFullscreen) {
+      enterFullscreen();
+    }
+  }, {
+    once: true,
+    passive: true,
+  })
+
+  useEventListener("keydown", () => {
+    if (!isFullscreen) {
+      enterFullscreen();
+    }
+  }, {
+    once: true,
+    passive: true,
+  })
 
   return (
     <main>
@@ -33,11 +53,11 @@ function App() {
           padding: 0,
         }}
       >
-        <Background showView={showView} viewVisible={viewVisible} />
+        <Background showView={showView} viewVisible={viewVisible} letsStart={letsStart} />
       </div>
       {viewVisible && (
         <>
-          <Header />
+          <Header getStarted={getStarted} />
           <Overview />
           <Features />
           <Components />

@@ -1,5 +1,6 @@
 import { Tween, ScrollTrigger } from "react-gsap";
 import { header, h1, ctButton, span, card } from "./style.css";
+import CTA from "./CTA";
 
 const { random, round } = Math;
 
@@ -29,7 +30,11 @@ const text = "Continuum Design System".split("").map((char, index) => {
   );
 });
 
-export default function Header() {
+type HeaderProps = {
+  getStarted: () => void;
+}
+
+export default function Header({ getStarted }: HeaderProps) {
   return (
     <ScrollTrigger start="bottom center" end="bottom+=300px center" scrub={0.5}>
       <header className={header}>
@@ -63,7 +68,8 @@ export default function Header() {
           }}
         >
           <div className={card}>
-            <cds-button className={ctButton}>Get Started</cds-button>
+            {/* <cds-button className={ctButton}>Get Started</cds-button> */}
+            <CTA getStarted={getStarted} />
           </div>
         </Tween>
       </header>

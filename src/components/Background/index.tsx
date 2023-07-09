@@ -13,11 +13,12 @@ export type AnimationActions = {
 
 export type ModelProps = JSX.IntrinsicElements["group"] & {
   /** Shows the View */
-  showView: () => void;
+  showView: (value: boolean) => void;
   viewVisible: boolean;
+  letsStart: boolean;
 };
 
-export default function Background({ showView, viewVisible }: ModelProps) {
+export default function Background({ showView, viewVisible, letsStart }: ModelProps) {
   return (
     <Canvas
       gl={{
@@ -36,7 +37,7 @@ export default function Background({ showView, viewVisible }: ModelProps) {
         far: 150,
       }}
     >
-      <Infinity showView={showView} viewVisible={viewVisible} />
+      <Infinity showView={showView} viewVisible={viewVisible} letsStart={letsStart} />
       <Stars visibility={viewVisible} />
     </Canvas>
   );

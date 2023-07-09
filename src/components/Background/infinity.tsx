@@ -8,7 +8,7 @@ import { useTexture } from "@react-three/drei/core/useTexture";
 import useMount from "ahooks/lib/useMount";
 
 import { ModelProps } from ".";
-import { animation } from "./animations";
+import { animation, getStartedAnimation } from "./animations";
 
 import glbModel from "../../assets/gltf/infinity.glb";
 import grainy_texture from "../../assets/textures/infinity.jpg";
@@ -23,6 +23,7 @@ type GLTFResult = GLTF & {
 export default function Infinity({
   viewVisible,
   showView,
+  letsStart,
   ...props
 }: ModelProps) {
   const group = useRef<Group>(null);
@@ -43,11 +44,15 @@ export default function Infinity({
   });
 
   useFrame((renderer) => {
-    if (viewVisible) animation(renderer);
+    if (letsStart) {
+      showView(false);
+      getStartedAnimation(renderer);
+    }
+    else if (viewVisible) animation(renderer);
     else {
       const progress =
         actions.Initial!.time / actions.Initial!.getClip().duration;
-      if (progress > 0.91) showView();
+      if (progress > 0.91) showView(true);
     }
   });
 
