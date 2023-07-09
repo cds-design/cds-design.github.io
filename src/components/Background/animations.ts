@@ -93,8 +93,18 @@ export function getStartedAnimation(renderer: RootState) {
     [renderer.scene.scale, new Vector3(0.1, 0.1, 0.1)],
   );
 
-  if (time < 1) {
-    window.location.href = "/docs/getting-started"
+  // Navigate to docs/get-started after animation is done
+  if (time < 0.5) {
+
+    /**
+     * This method is used only to use react navigation system. 
+     * It's not the best way to do it, but it works. 
+     * this is the faster method compared to using `window.location.href` and `window.location.assign`
+    */
+    const docsGetStarted = document.createElement('a');
+    docsGetStarted.href = '/docs/get-started';
+    document.body.appendChild(docsGetStarted);
+    docsGetStarted.click();
   }
 
   renderer.scene.scale.lerp(new Vector3(0.1, 0.1, 0.1), LERP_SPEED);
