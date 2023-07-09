@@ -3,7 +3,6 @@ import "./App.css";
 import { load } from "cds-design";
 import useFullscreen from "ahooks/lib/useFullscreen";
 import useBoolean from "ahooks/lib/useBoolean";
-import useEventListener from "ahooks/lib/useEventListener";
 
 import Background from "./components/Background";
 import Header from "./components/Header";
@@ -22,24 +21,6 @@ function App() {
   const [isFullscreen, { enterFullscreen }] = useFullscreen(
     document.documentElement,
   );
-
-  useEventListener("mousedown", () => {
-    if (!isFullscreen) {
-      enterFullscreen();
-    }
-  }, {
-    once: true,
-    passive: true,
-  })
-
-  useEventListener("keydown", () => {
-    if (!isFullscreen) {
-      enterFullscreen();
-    }
-  }, {
-    once: true,
-    passive: true,
-  })
 
   return (
     <main>
