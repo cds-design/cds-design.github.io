@@ -57,7 +57,7 @@ const mason = [
   },
   {
     name: "Twitter",
-    href: "https://twitter.com",
+    href: "https://twitter.com/DesignByCDS",
     gridArea: "tweet",
     writingMode: "horizontal-tb",
     fontSize: "1.5em",
