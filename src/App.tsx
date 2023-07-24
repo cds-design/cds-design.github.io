@@ -52,6 +52,9 @@ function App() {
           position: "fixed",
           inset: 0,
           zIndex: -100,
+          width: "100vw",
+          height: "100vh",
+          objectFit: "cover",
         }}
         alt=""
       />
