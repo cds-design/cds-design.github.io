@@ -26,6 +26,7 @@ const indications: ComplexStyleRule = {
   top: 0,
   fontFamily: `"Dela Gothic One", sans-serif`,
   fontSize: "5em",
+  zIndex: 1000,
 };
 
 const before = style({

@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 
 import Infinity from "./infinity";
 import Stars from "./stars";
+import { isPortrait } from "../../helpers";
 
 type ActionName = "Initial" | "Overview" | "Features";
 type GLTFActions = Record<ActionName, THREE.AnimationAction>;
@@ -37,7 +38,11 @@ export default function Background({ showView, viewVisible, letsStart }: ModelPr
         far: 150,
       }}
     >
-      <Infinity showView={showView} viewVisible={viewVisible} letsStart={letsStart} />
+      {
+        isPortrait()
+          ? null
+          : <Infinity showView={showView} viewVisible={viewVisible} letsStart={letsStart} />
+      }
       <Stars visibility={viewVisible} />
     </Canvas>
   );

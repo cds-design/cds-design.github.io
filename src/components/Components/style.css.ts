@@ -45,6 +45,11 @@ const section = style({
   placeItems: "center",
   position: "relative",
   marginBlock: "25vh",
+  "@media": {
+    "(max-width: 780px)": {
+      marginBlock: 0,
+    }
+  }
 });
 
 const div = style({
@@ -70,6 +75,11 @@ const component = style({
   vars: {
     "--min-chars": "15ch",
   },
+  "@media": {
+    "(max-width: 780px)": {
+      fontSize: "1rem"
+    }
+  }
 });
 
 const svg = style({
@@ -81,6 +91,7 @@ const svg = style({
   zIndex: 10,
   pointerEvents: "none",
   fontSize: "0.2em",
+  userSelect: "none",
 });
 
 const path = style({

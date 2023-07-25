@@ -1,5 +1,5 @@
-import { Tween } from "react-gsap";
 import { active_text, path as path_class, text, svg } from "./style.css";
+import { Animate } from "../../helpers";
 
 const components = [
   {
@@ -36,7 +36,7 @@ export default function Nav({
   activeComponent: number;
 }) {
   return (
-    <Tween
+    <Animate
       to={{
         rotation: -90,
       }}
@@ -66,6 +66,6 @@ export default function Nav({
           );
         })}
       </svg>
-    </Tween>
+    </Animate>
   );
 }

@@ -5,6 +5,13 @@ const section = style({
   flexDirection: "column",
   alignItems: "stretch",
   justifyContent: "space-evenly",
+  "@media": {
+    "(max-width: 780px)": {
+      gap: "1em",
+      padding: "1em",
+      fontSize: "0.5em",
+    }
+  }
 });
 
 const feature = style({
@@ -21,6 +28,14 @@ const feature = style({
     // backgroundImage: "linear-gradient(45deg, rgba(95, 228, 255, 0) 70%, rgb(42, 78, 255) 90%)",
     backdropFilter: "blur(5px) brightness(3)",
   },
+  "@media": {
+    "(max-width: 780px)": {
+      backdropFilter: "blur(5px) brightness(3)",
+      borderRadius: "1em",
+      overflow: "hidden",
+      borderBottom: "none",
+    }
+  }
 });
 
 const title = style({
@@ -37,6 +52,18 @@ const title = style({
         "linear-gradient(90deg, rgba(42, 78, 255, 0.789) 0%, rgb(95, 228, 255) 60%)",
     },
   },
+  "@media": {
+    "(max-width: 780px)": {
+      fontSize: "1em",
+      marginBlockEnd: "0.5em",
+      WebkitBackgroundClip: "text !important",
+      backgroundClip: "text !important",
+      WebkitTextFillColor: "transparent",
+      color: "transparent",
+      background:
+        "linear-gradient(90deg, rgba(42, 78, 255, 0.789) 0%, rgb(95, 228, 255) 60%)",
+    },
+  }
 });
 
 const description = style({
@@ -48,6 +75,13 @@ const description = style({
   transition: "all 0.4s ease",
   selectors: {
     [`${feature}:hover > &`]: {
+      fontSize: "0.5em",
+      opacity: 1,
+      marginBlockEnd: "3em",
+    },
+  },
+  "@media": {
+    "(max-width: 780px)": {
       fontSize: "0.5em",
       opacity: 1,
       marginBlockEnd: "3em",

@@ -6,6 +6,7 @@ import tweet_icon from "./icons/tweet.svg";
 import road_icon from "./icons/road.svg";
 import blog_icon from "./icons/blog.svg";
 import comp_icon from "./icons/comp.svg";
+import { isPortrait } from "../../helpers";
 
 const vmin = Math.min(innerWidth, innerHeight); // 100vmin
 
@@ -88,13 +89,15 @@ export default function Footer() {
       <div>
         &copy; <span className={company}>Verve</span> {new Date().getFullYear()}
       </div>
-      <div
-        className={cursor}
-        style={{
-          left: cords.x,
-          top: cords.y,
-        }}
-      />
+      {!isPortrait() &&
+        <div
+          className={cursor}
+          style={{
+            left: cords.x,
+            top: cords.y,
+          }}
+        />
+      }
     </footer>
   );
 }

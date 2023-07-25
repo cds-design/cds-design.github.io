@@ -11,11 +11,13 @@ import Features from "./components/Features";
 import Comparison from "./components/Comparison";
 import Components from "./components/Components";
 import Footer from "./components/Footer";
+import { isPortrait } from "./helpers";
+import NavBar from "./components/NavBar";
 
 load("button", "alert", "input", "toggle", "check", "slider");
 
 function App() {
-  const [viewVisible, { set: showView }] = useBoolean();
+  const [viewVisible, { set: showView }] = useBoolean(isPortrait());
   const [letsStart, { setTrue: getStarted }] = useBoolean();
 
   const [isFullscreen, { enterFullscreen }] = useFullscreen(
@@ -36,7 +38,18 @@ function App() {
       >
         <Background showView={showView} viewVisible={viewVisible} letsStart={letsStart} />
       </div>
-      {viewVisible && (
+      {isPortrait()
+        ? (
+          <>
+            <NavBar />
+            <Overview />
+            <Features />
+            <Components />
+            <Footer />
+          </>
+        )
+        : (viewVisible &&
+          (
         <>
           <Header getStarted={getStarted} />
           <Overview />
@@ -45,7 +58,8 @@ function App() {
           <Comparison />
           <Footer />
         </>
-      )}
+          ))
+      }
       <img
         src="./bg.svg"
         style={{

@@ -1,6 +1,7 @@
 import { Tween, ScrollTrigger } from "react-gsap";
 
 import { section, h2, span, gradient } from "./style.css";
+import { Animate } from "../../helpers";
 
 export default function () {
   const rollUp = {
@@ -18,24 +19,24 @@ export default function () {
     <section className={section}>
       <h2 className={h2}>
         <ScrollTrigger start="-200px center" end="200px center" scrub={0.5}>
-          <Tween {...rollUp}>
+          <Animate {...rollUp}>
             <span className={span}>The</span>
-          </Tween>
-          <Tween {...rollUp}>
+          </Animate>
+          <Animate {...rollUp}>
             <span className={[gradient, span].join(" ")}>Design system</span>
-          </Tween>
-          <Tween {...rollUp}>
+          </Animate>
+          <Animate {...rollUp}>
             <span className={span}>from the</span>
-          </Tween>
-          <Tween {...rollUp}>
+          </Animate>
+          <Animate {...rollUp}>
             <span className={[gradient, span].join(" ")}>future</span>
-          </Tween>
-          <Tween {...rollUp}>
+          </Animate>
+          <Animate {...rollUp}>
             <span className={span}>into your</span>
-          </Tween>
-          <Tween {...rollUp}>
+          </Animate>
+          <Animate {...rollUp}>
             <span className={span}>hands</span>
-          </Tween>
+          </Animate>
         </ScrollTrigger>
       </h2>
     </section>

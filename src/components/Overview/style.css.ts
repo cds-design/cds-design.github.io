@@ -4,6 +4,11 @@ const section = style({
   display: "flex",
   zIndex: -10,
   marginInline: "2em",
+  "@media": {
+    "(max-width: 780px)": {
+      fontSize: "0.5em",
+    }
+  },
 });
 
 const h2 = style({
@@ -28,6 +33,7 @@ const gradient = style({
   color: "transparent",
   background:
     "linear-gradient(90deg, rgba(42, 78, 255, 0.789) 0%, rgb(95, 228, 255) 60%)",
+  textAlign: "left",
 });
 
 export { section, h2, span, gradient };

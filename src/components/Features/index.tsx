@@ -1,10 +1,11 @@
-import { ScrollTrigger, Tween } from "react-gsap";
+import { ScrollTrigger } from "react-gsap";
 import {
   feature,
   section,
   title as title_style,
   description as description_style,
 } from "./style.css";
+import { Animate } from "../../helpers";
 
 const features = [
   {
@@ -75,7 +76,7 @@ export default function Features() {
       <section className={section}>
         {features.map(({ title, description }, index) => {
           return (
-            <Tween
+            <Animate
               from={{
                 transform: "translateX(100%) skewY(-20deg)",
               }}
@@ -96,7 +97,7 @@ export default function Features() {
                 <h3 className={title_style}>{title}</h3>
                 <p className={description_style}>{description}</p>
               </div>
-            </Tween>
+            </Animate>
           );
         })}
       </section>

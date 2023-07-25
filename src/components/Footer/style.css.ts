@@ -6,6 +6,12 @@ const footer = style({
   overflow: "hidden",
   gridTemplateRows: " 1fr auto",
   paddingBlock: "2em",
+  justifyContent: "center",
+  "@media": {
+    "(max-width: 780px)": {
+      minHeight: "auto",
+    }
+  }
 });
 
 const cursor = style({
@@ -43,6 +49,12 @@ const masonry = style({
                     "docs comp  comp comp"
                     `,
   transform: "scale(1.2)",
+  "@media": {
+    "(max-width: 780px)": {
+      transform: "scale(0.5)",
+      gap: "0em",
+    }
+  }
 });
 
 const link = style({

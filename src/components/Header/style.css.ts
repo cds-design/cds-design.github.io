@@ -15,7 +15,7 @@ const header = style({
 });
 
 const h1 = style({
-  fontSize: "5em",
+  fontSize: "5vw",
   lineHeight: 1.1,
   fontFamily: `"Dela Gothic One", sans-serif`,
 
