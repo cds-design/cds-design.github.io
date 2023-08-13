@@ -41,13 +41,13 @@
     "react-curved-text": "^2.0.2",
     "react-dom": "^18.2.0",
     "react-gsap": "^3.2.1",
-    "three": "^0.154.0",
+    "three": "^0.155.0",
     "three-stdlib": "^2.23.13"
   },
   "devDependencies": {
-    "@types/react": "^18.2.14",
+    "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.6",
-    "@types/three": "^0.153.0",
+    "@types/three": "^0.155.0",
     "@vanilla-extract/css": "^1.12.0",
     "@vanilla-extract/vite-plugin": "^3.8.2",
     "@vitejs/plugin-react-swc": "^3.3.2",
