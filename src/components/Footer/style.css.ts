@@ -69,8 +69,11 @@ const link = style({
   },
 });
 
+const company_wrap=style({
+  zIndex:99999,
+})
 const company = style({
   // fontFamily: `"Dela Gothic One", sans-serif`,
 });
 
-export { footer, cursor, masonry, link, company };
+export { footer, cursor, masonry, link, company,company_wrap };
