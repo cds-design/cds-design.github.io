@@ -18,7 +18,7 @@ const h1 = style({
   fontSize: "5vw",
   lineHeight: 1.1,
   fontFamily: `"Dela Gothic One", sans-serif`,
-
+  zIndex:99999,
   position: "fixed",
   top: "50%",
   left: "50%",

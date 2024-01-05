@@ -1,5 +1,5 @@
 import { MouseEvent, useState } from "react";
-import { footer, cursor, masonry, link, company } from "./style.css";
+import { footer, cursor, masonry, link, company ,company_wrap} from "./style.css";
 import docs_icon from "./icons/docs.svg";
 import git_icon from "./icons/git.svg";
 import tweet_icon from "./icons/tweet.svg";
@@ -86,7 +86,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div>
+      <div className={company_wrap}>
         &copy; <span className={company}>Verve</span> {new Date().getFullYear()}
       </div>
       {!isPortrait() &&
